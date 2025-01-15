@@ -4,35 +4,35 @@ import Footer from '../components/Footer';
 
 export default function Contact() {
   return (
-    <div className='bg-gray'>
-      <div className='flex justify-center space-x-4'>
-      <div className='space-y-2'>
+    <div className='bg-gray min-h-screen flex flex-col justify-between'>
+      <div className='flex justify-center items-center flex-grow'>
+      <div className='space-y-2 p-4'>
         <p className='text-lg'>
-          <strong>Your welcome to contact us.</strong>
+        <strong>Your welcome to contact us.</strong>
         </p>
         <p className='text-base'>
-          Address:
+        Address:
         </p>
         <p className='text-sm'>
-          Brunchy Coffee,
-          <br />
-          1234 Maplewood Avenue,
-          <br />
-          Suite 100, Brookside,
-          <br />
-          CA 90210
+        Brunchy Coffee,
+        <br />
+        1234 Maplewood Avenue,
+        <br />
+        Suite 100, Brookside,
+        <br />
+        CA 90210
         </p>
         <p className='text-base'>
-          Open Hours:
+        Open Hours:
         </p>
         <p className='text-sm'>
-          Mo-Sun 9 AM - 5PM
+        Mo-Sun 9 AM - 5PM
         </p>
         <p className='text-base'>
-          Email: <a href="mailto:link@reactcafe.com" className='text-blue-500 underline'>link@reactcafe.com</a>
+        Email: <a href="mailto:link@reactcafe.com" className='text-blue-500 underline'>link@reactcafe.com</a>
         </p>
         <p className='text-base'>
-          Phone: <a href="tel:link-phonenumber" className='text-blue-500 underline'>link-phonenumber</a>
+        Phone: <a href="tel:link-phonenumber" className='text-blue-500 underline'>link-phonenumber</a>
         </p>
       </div>
 
