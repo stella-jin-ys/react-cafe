@@ -1,12 +1,18 @@
 import React from "react";
-import Menu from "./Menu"; // Your menu page
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import ProductPage from './ProductPage'; 
+import Menu from './Menu'; 
 
-const App: React.FC = () => {
+
+function App() {
   return (
-    <div>
-      <Menu />
-    </div>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Menu />} />
+          <Route path="/product/:id" element={<ProductPage />} />
+        </Routes>
+      </Router>
   );
-};
+}
 
 export default App;

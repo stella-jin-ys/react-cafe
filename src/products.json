@@ -1,0 +1,56 @@
+[
+{
+    "id": 1,
+    "name": "Espresso",
+    "description": "Strong and bold coffee.",
+    "price": 25,
+    "image": "https://res.cloudinary.com/dtgczxb3p/image/upload/v1736857247/pixlr-image-generator-bd9a1bc1-6f37-4673-a3a3-b4edef132b2d_ldguup.webp",
+    "details": "Espresso is a concentrated coffee brewed by forcing hot water through finely-ground coffee beans. It is the base for many other coffee drinks like lattes and cappuccinos.",
+    "quantity": 1
+  },
+  {
+    "id": 2,
+    "name": "Latte",
+    "description": "Creamy coffee with milk.",
+    "price": 30,
+    "image": "https://res.cloudinary.com/dtgczxb3p/image/upload/v1736857240/pixlr-image-generator-a76a37b5-137d-4a5a-a9ae-83b3632ded27_cjvava.webp",
+    "details": "A latte is a popular coffee drink made with a single or double shot of espresso and steamed milk, topped with a small amount of foam. It's creamy and smooth.",
+    "quantity": 1
+  },
+  {
+    "id": 3,
+    "name": "Cappuccino",
+    "description": "Rich and frothy coffee.",
+    "price": 35,
+    "image": "https://res.cloudinary.com/dtgczxb3p/image/upload/v1736857227/pixlr-image-generator-ddbcb125-c211-43e7-a130-2d823304f861_rkrkyp.webp",
+    "details": "Cappuccino is a coffee-based drink made with equal parts espresso, steamed milk, and milk foam. It has a bold taste and is often sprinkled with cocoa powder or cinnamon.",
+    "quantity": 1
+  },
+  {
+    "id": 4,
+    "name": "Americano",
+    "description": "Diluted espresso with hot water.",
+    "price": 20,
+    "image": "https://res.cloudinary.com/dtgczxb3p/image/upload/v1736857215/pixlr-image-generator-c39907ff-9ab3-4649-ba25-9f99ee9f1fc8_oxw601.webp",
+    "details": "Americano is a simple coffee drink made by diluting espresso with hot water. It's less intense than espresso but retains its rich flavor.",
+    "quantity": 1
+  },
+  {
+    "id": 5,
+    "name": "Flat White",
+    "description": "Smooth coffee with steamed microfoam milk.",
+    "price": 32,
+    "image": "https://res.cloudinary.com/dtgczxb3p/image/upload/v1736857926/pixlr-image-generator-2d6bc2f3-6f87-429b-8a6a-b88ad71d1c65_iubmpd.webp",
+    "details": "Flat White is a velvety coffee drink made with a double shot of espresso and steamed microfoam milk. It's richer than a latte but smoother than a cappuccino.",
+    "quantity": 1
+  },
+  {
+    "id": 6,
+    "name": "Mocha",
+    "description": "Rich coffee with a chocolatey twist.",
+    "price": 38,
+    "image": "https://res.cloudinary.com/dtgczxb3p/image/upload/v1736857958/pixlr-image-generator-544836f4-010f-4f4a-beb3-4bb8c82bb302_zewcoo.webp",
+    "details": "Mocha is a chocolate-flavored coffee drink made with espresso, steamed milk, and chocolate syrup or powder. It’s a delightful blend of coffee and dessert.",
+    "quantity": 1
+  }
+]
