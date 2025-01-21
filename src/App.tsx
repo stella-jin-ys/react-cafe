@@ -1,14 +1,25 @@
-import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Contact from "./pages/Contact";
-import Review from "./components/Review";
+import Home from "./Home";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import Payment from "./Payment";
+import Menu from "./Menu";
+import ProductPage from "./ProductPage";
+import Contact from "./Contact";
+import { CartProvider } from "./CartContext";
 
-const App: React.FC = () => {
-  return <div>
-          <Routes>
-            <Route path="/contact" element={<Contact />}></Route>
-          </Routes>
-         </div>;
+function App() {
+  return (
+    <CartProvider>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/menu" element={<Menu />} />
+          <Route path="/payment" element={<Payment />} />
+          <Route path="/product/:id" element={<ProductPage />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </Router>
+    </CartProvider>
+  );
 }
 
 export default App;
