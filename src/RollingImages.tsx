@@ -16,12 +16,12 @@ export default function RollingImages() {
         }}
       >
         {images.concat(images).map((image, i) => (
-          <button className="flex-shrink-0 w-48 h-48  rounded-lg overflow-hidden mr-5">
+          <button className="flex-shrink-0 w-48 h-48  rounded-lg overflow-hidden mr-5 transform transition-transform hover:scale-110">
             <img
               key={i}
               src={image}
               alt="Rolling image"
-              className="h-full w-full object-cover "
+              className="h-full w-full object-cover"
             />
           </button>
         ))}

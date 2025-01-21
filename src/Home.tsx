@@ -1,9 +1,7 @@
 import Nav from "./Nav";
 import RollingImages from "./RollingImages";
 
-type Props = {};
-
-export default function Home({}: Props) {
+export default function Home() {
   return (
     <div className="bg-gray h-full">
       <Nav />
