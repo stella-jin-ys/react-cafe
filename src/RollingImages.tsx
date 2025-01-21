@@ -1,7 +1,3 @@
-import React from "react";
-
-type Props = {};
-
 const images = [
   "https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Y2FmZXxlbnwwfHwwfHx8MA%3D%3D",
   "https://images.unsplash.com/photo-1494314671902-399b18174975?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Y29mZmVlfGVufDB8fDB8fHww",
@@ -10,7 +6,7 @@ const images = [
   "https://plus.unsplash.com/premium_photo-1669687924558-386bff1a0469?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8ODh8fGNvZmZlZXxlbnwwfHwwfHx8MA%3D%3D",
 ];
 
-export default function RollingImages({}: Props) {
+export default function RollingImages() {
   return (
     <div className="overflow-hidden relative w-4/5 md:w-2/3 lg:w-1/2 h-96 ">
       <div

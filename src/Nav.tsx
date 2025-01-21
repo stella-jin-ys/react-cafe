@@ -1,17 +1,18 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { useCart } from "./CartContext";
 
-type Props = {};
-
-export default function Nav({}: Props) {
+export default function Nav() {
   const [sideNav, setSideNav] = useState(false);
-  const clickSideNav = () => setSideNav(!sideNav);
+  const clickSideNav = () => setSideNav((prev) => !prev);
+  const { totalQuantity } = useCart();
+
   return (
     <div className="flex justify-around p-5">
       <Link to="/">
         <div className="flex gap-1 font-bol">
           <img
-            src="./assets/logo.png"
+            src="/assets/logo.png"
             alt="logo"
             className="w-6 h-6 object-cover"
           />
@@ -22,14 +23,14 @@ export default function Nav({}: Props) {
         <div className="sm:hidden">
           {sideNav ? (
             <img
-              src="./assets/close.png"
+              src="/assets/close.png"
               alt="close icon"
               className="w-8 h-8 cursor-pointer"
               onClick={clickSideNav}
             />
           ) : (
             <img
-              src="./assets/hamburger.png"
+              src="/assets/hamburger.png"
               alt="hamburger menu"
               className="w-8 h-8 cursor-pointer"
               onClick={clickSideNav}
@@ -74,11 +75,18 @@ export default function Nav({}: Props) {
           </div>
         </div>
         <Link to="/payment">
-          <img
-            src="./assets/cart.png"
-            alt=""
-            className="w-7 h-7 object-cover cursor-pointer"
-          />
+          <div className="relative">
+            <img
+              src="/assets/cart.png"
+              alt="cart"
+              className="w-7 h-7 object-cover cursor-pointer"
+            />
+            {totalQuantity > 0 && (
+              <span className="absolute -top-1 left-4 bg-white text-bg-slate-600  rounded-full w-4 h-4  flex items-center justify-center text-sm">
+                {totalQuantity}
+              </span>
+            )}
+          </div>
         </Link>
       </div>
     </div>

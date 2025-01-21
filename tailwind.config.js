@@ -1,11 +1,13 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{js,jsx,ts,tsx}"],
+  content: ["./src/**/*.{html,js,jsx,ts,tsx}"],
   theme: {
     extend: {
       colors: {
         gray: "#dad7cd",
         lightGray: "#f0ebd8",
+        darkBrown: "#3e2c41",
+        lightBeige: "#fefae0",
       },
       fontFamily: {
         "kings-regular": ['"Kings"', "serif"],
