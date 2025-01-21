@@ -50,7 +50,7 @@ export default function Nav() {
                 </Link>
               </div>
               <div>
-                <Link to="contact" className="hover:border-b ">
+                <Link to="/contact" className="hover:border-b ">
                   CONTACT
                 </Link>
               </div>
@@ -69,7 +69,7 @@ export default function Nav() {
             </Link>
           </div>
           <div>
-            <Link to="contact" className="hover:border-b ">
+            <Link to="/contact" className="hover:border-b ">
               CONTACT
             </Link>
           </div>

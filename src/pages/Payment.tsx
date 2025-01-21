@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import Nav from "./Nav";
-import { useCart } from "./CartContext";
+import Nav from "../components/Nav";
+import { useCart } from "../components/CartContext";
 
 type Props = {};
 
@@ -59,7 +59,7 @@ export default function Payment({}: Props) {
                   onClick={() => handleRemoveItem(item.id)}
                 >
                   <img
-                    src="./assets/close.png"
+                    src="/assets/close.png"
                     alt="delete item"
                     className="w-6 h-6 object-cover"
                   />
@@ -102,13 +102,13 @@ export default function Payment({}: Props) {
 
               <div>
                 <img
-                  src="./assets/scan.png"
+                  src="/assets/scan.png"
                   alt="payment code"
                   className="h-20 w-20 object-cover"
                 />
               </div>
-              <div>
-                <label htmlFor="email">
+              <div className="flex flex-col">
+                <label htmlFor="email" className="w-full">
                   Enter your email address to receive order status
                 </label>
                 <input

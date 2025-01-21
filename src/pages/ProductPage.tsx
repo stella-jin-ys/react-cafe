@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
-import productData from "./products.json";
-import Nav from "./Nav";
-import { useCart, CartItem } from "./CartContext";
+import productData from "../products.json";
+import Nav from "../components/Nav";
+import { useCart, CartItem } from "../components/CartContext";
 
 const ProductPage: React.FC = () => {
   const { id } = useParams<{ id: string }>();

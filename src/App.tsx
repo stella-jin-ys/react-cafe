@@ -1,10 +1,10 @@
-import Home from "./Home";
+import Home from "./pages/Home";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import Payment from "./Payment";
-import Menu from "./Menu";
-import ProductPage from "./ProductPage";
-import Contact from "./Contact";
-import { CartProvider } from "./CartContext";
+import Payment from "./pages/Payment";
+import Menu from "./pages/Menu";
+import ProductPage from "./pages/ProductPage";
+import { CartProvider } from "./components/CartContext";
+import Contact from "./pages/Contact";
 
 function App() {
   return (

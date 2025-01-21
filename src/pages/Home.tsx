@@ -1,5 +1,5 @@
-import Nav from "./Nav";
-import RollingImages from "./RollingImages";
+import Nav from "../components/Nav";
+import RollingImages from "../components/RollingImages";
 
 export default function Home() {
   return (
@@ -15,7 +15,7 @@ export default function Home() {
           <img
             src="https://plus.unsplash.com/premium_photo-1664970900025-1e3099ca757a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2FmZXxlbnwwfHwwfHx8MA%3D%3D"
             className="w-auto max-h-screen object-cover"
-            alt=""
+            alt="home page"
           />
         </div>
       </div>
