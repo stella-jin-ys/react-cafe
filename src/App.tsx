@@ -6,8 +6,7 @@ import Review from "./components/Review";
 const App: React.FC = () => {
   return <div>
           <Routes>
-            <Route path="/" element={<Contact />}></Route>
-            <Route path="/review" element={<Review />}></Route>
+            <Route path="/contact" element={<Contact />}></Route>
           </Routes>
          </div>;
 }
