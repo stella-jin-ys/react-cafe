@@ -38,8 +38,8 @@ export default function Contact() {
       </div>
 
       <div className='flex flex-col space-y-4 p-4'>
-      <img className='h-48 w-48 md:h-100 md:w-96 object-cover' src="/img/coffeshop.png" alt="coffeshop1" />
-      <img className='h-48 w-48 md:h-100 md:w-96 object-cover' src="/img/coffeshops.png" alt="coffeshop2" />
+      <img className='h-48 w-48 md:h-100 md:w-96 object-cover' src="/assets/coffeshop.png" alt="coffeshop1" />
+      <img className='h-48 w-48 md:h-100 md:w-96 object-cover' src="/assets/coffeshops.png" alt="coffeshop2" />
       </div>
       </div>
 

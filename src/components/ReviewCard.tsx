@@ -89,46 +89,46 @@ const ReviewsComponent = () => {
   const paginate = (pageNumber: React.SetStateAction<number>) => setCurrentPage(pageNumber);
 
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="container mx-auto px-4 py-8 h-full flex flex-col justify-center items-center">
       <h2 className="text-3xl font-bold mb-6 text-center">Customer Reviews</h2>
-      <div className="mb-4 flex justify-end">
-        <label htmlFor="sortBy" className="mr-2 text-gray-700">Sort by:</label>
-        <select
-          id="sortBy"
-          value={sortBy}
-          onChange={(e) => setSortBy(e.target.value)}
-          className="border rounded-md px-2 py-1 focus:outline-none focus:ring-2 focus:ring-blue-500"
-        >
-          <option value="latest">Latest</option>
-          <option value="highest">Highest Rated</option>
-          <option value="lowest">Lowest Rated</option>
-        </select>
+      <div className="mb-4 flex justify-end w-full max-w-2xl">
+      <label htmlFor="sortBy" className="mr-2 text-gray-700">Sort by:</label>
+      <select
+        id="sortBy"
+        value={sortBy}
+        onChange={(e) => setSortBy(e.target.value)}
+        className="border rounded-md px-2 py-1 focus:outline-none focus:ring-2 focus:ring-blue-500"
+      >
+        <option value="latest">Latest</option>
+        <option value="highest">Highest Rated</option>
+        <option value="lowest">Lowest Rated</option>
+      </select>
       </div>
-      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-        {currentReviews.map((review) => (
-          <ReviewCard key={review.id} review={review} />
-        ))}
+      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 w-full max-w-2xl">
+      {currentReviews.map((review) => (
+        <ReviewCard key={review.id} review={review} />
+      ))}
       </div>
-      <div className="mt-8 flex justify-center items-center">
-        <button
-          onClick={() => paginate(currentPage - 1)}
-          disabled={currentPage === 1}
-          className="mr-2 px-4 py-2 bg-blue-500 text-white rounded-md disabled:opacity-50 disabled:cursor-not-allowed"
-          aria-label="Previous page"
-        >
-          <FaChevronLeft />
-        </button>
-        <span className="mx-4 text-gray-700">
-          Page {currentPage} of {Math.ceil(reviews.length / reviewsPerPage)}
-        </span>
-        <button
-          onClick={() => paginate(currentPage + 1)}
-          disabled={currentPage === Math.ceil(reviews.length / reviewsPerPage)}
-          className="ml-2 px-4 py-2 bg-blue-500 text-white rounded-md disabled:opacity-50 disabled:cursor-not-allowed"
-          aria-label="Next page"
-        >
-          <FaChevronRight />
-        </button>
+      <div className="mt-8 flex justify-center items-center w-full max-w-2xl">
+      <button
+        onClick={() => paginate(currentPage - 1)}
+        disabled={currentPage === 1}
+        className="mr-2 px-4 py-2 bg-blue-500 text-white rounded-md disabled:opacity-50 disabled:cursor-not-allowed"
+        aria-label="Previous page"
+      >
+        <FaChevronLeft />
+      </button>
+      <span className="mx-4 text-gray-700">
+        Page {currentPage} of {Math.ceil(reviews.length / reviewsPerPage)}
+      </span>
+      <button
+        onClick={() => paginate(currentPage + 1)}
+        disabled={currentPage === Math.ceil(reviews.length / reviewsPerPage)}
+        className="ml-2 px-4 py-2 bg-blue-500 text-white rounded-md disabled:opacity-50 disabled:cursor-not-allowed"
+        aria-label="Next page"
+      >
+        <FaChevronRight />
+      </button>
       </div>
     </div>
   );
