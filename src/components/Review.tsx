@@ -11,18 +11,18 @@ export default function Review() {
   const [reviews, setReviews] = useState(reviewsData);
 
   return (
-    <div className='bg-gray p-4 flex flex-col items-center min-h-screen'>
+    <div className='bg-gray p-4 flex flex-col items-center justify-center h-full'>
       <div className='relative w-full max-w-screen-xl h-full'>
-      <div className='flex overflow-x-auto no-scrollbar h-full' dir='rtl'>
+      <div className='flex flex-wrap justify-center h-full' dir='rtl'>
         {reviews.map((review) => (
-        <div key={review.id} className='bg-white p-4 rounded shadow m-2 flex-shrink-0 w-80' dir='ltr'>
-          <div className='flex items-center mb-2'>
-          <div className='font-bold'>{review.name}</div>
-          <div className='ml-auto flex'>
+        <div key={review.id} className='bg-white p-6 rounded-lg shadow-lg m-4 w-full md:w-1/2 lg:w-1/3' dir='ltr'>
+          <div className='mb-4'>
+          <h2 className='text-2xl font-bold mb-2'>{review.name}</h2>
+          <div className='flex'>
             {[...Array(5)].map((_, i) => (
             <svg
               key={i}
-              className={`w-4 h-4 ${i < review.rating ? 'text-yellow-500' : 'text-gray-300'}`}
+              className={`w-5 h-5 ${i < review.rating ? 'text-yellow-500' : 'text-gray-300'}`}
               fill='currentColor'
               viewBox='0 0 20 20'
             >
@@ -31,7 +31,7 @@ export default function Review() {
             ))}
           </div>
           </div>
-          <div>{review.comment}</div>
+          <p className='text-gray-700 mb-4'>{review.comment}</p>
           <div className='text-sm text-gray-500'>{review.date} - {review.location}</div>
         </div>
         ))}
@@ -53,7 +53,6 @@ export default function Review() {
       >
       Write a Review
       </button>
-
     </div>
   );
 }
