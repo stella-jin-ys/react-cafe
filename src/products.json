@@ -4,7 +4,7 @@
     "name": "Espresso",
     "description": "Strong and bold coffee.",
     "price": 25,
-    "image": "https://res.cloudinary.com/dtgczxb3p/image/upload/v1736857247/pixlr-image-generator-bd9a1bc1-6f37-4673-a3a3-b4edef132b2d_ldguup.webp",
+    "image": "https://res.cloudinary.com/dtgczxb3p/image/upload/v1737545739/pexels-karolina-grabowska-4210848_yr7u1j_c_pad_b_gen_fill_w_600_h_400_l9pg4x.jpg",
     "details": "Espresso is a concentrated coffee brewed by forcing hot water through finely-ground coffee beans. It is the base for many other coffee drinks like lattes and cappuccinos.",
     "quantity": 1
   },
@@ -13,7 +13,7 @@
     "name": "Latte",
     "description": "Creamy coffee with milk.",
     "price": 30,
-    "image": "https://res.cloudinary.com/dtgczxb3p/image/upload/v1736857240/pixlr-image-generator-a76a37b5-137d-4a5a-a9ae-83b3632ded27_cjvava.webp",
+    "image": "https://res.cloudinary.com/dtgczxb3p/image/upload/v1737539441/pexels-ekrulila-16733197_tqidbo.jpg",
     "details": "A latte is a popular coffee drink made with a single or double shot of espresso and steamed milk, topped with a small amount of foam. It's creamy and smooth.",
     "quantity": 1
   },
@@ -22,8 +22,7 @@
     "name": "Cappuccino",
     "description": "Rich and frothy coffee.",
     "price": 35,
-    "image": "https://res.cloudinary.com/dtgczxb3p/image/upload/v1736857227/pixlr-image-generator-ddbcb125-c211-43e7-a130-2d823304f861_rkrkyp.webp",
-    "details": "Cappuccino is a coffee-based drink made with equal parts espresso, steamed milk, and milk foam. It has a bold taste and is often sprinkled with cocoa powder or cinnamon.",
+    "image": "https://res.cloudinary.com/dtgczxb3p/image/upload/v1737546398/pexels-polina-tankilevitch-4109852_tvnaho_c_pad_b_gen_fill_w_600_h_400_mtbe6g.jpg",
     "quantity": 1
   },
   {
@@ -31,7 +30,7 @@
     "name": "Americano",
     "description": "Diluted espresso with hot water.",
     "price": 20,
-    "image": "https://res.cloudinary.com/dtgczxb3p/image/upload/v1736857215/pixlr-image-generator-c39907ff-9ab3-4649-ba25-9f99ee9f1fc8_oxw601.webp",
+    "image": "https://res.cloudinary.com/dtgczxb3p/image/upload/v1737545915/pexels-bentonphotocinema-15086186_3_dkqg5f_c_pad_b_gen_fill_w_600_h_400_dw8vsg.jpg",
     "details": "Americano is a simple coffee drink made by diluting espresso with hot water. It's less intense than espresso but retains its rich flavor.",
     "quantity": 1
   },
@@ -40,7 +39,7 @@
     "name": "Flat White",
     "description": "Smooth coffee with steamed microfoam milk.",
     "price": 32,
-    "image": "https://res.cloudinary.com/dtgczxb3p/image/upload/v1736857926/pixlr-image-generator-2d6bc2f3-6f87-429b-8a6a-b88ad71d1c65_iubmpd.webp",
+    "image": "https://res.cloudinary.com/dtgczxb3p/image/upload/v1737541212/pexels-studio-naae-15863863-10974541_ohwh0l.jpg",
     "details": "Flat White is a velvety coffee drink made with a double shot of espresso and steamed microfoam milk. It's richer than a latte but smoother than a cappuccino.",
     "quantity": 1
   },
@@ -49,8 +48,32 @@
     "name": "Mocha",
     "description": "Rich coffee with a chocolatey twist.",
     "price": 38,
-    "image": "https://res.cloudinary.com/dtgczxb3p/image/upload/v1736857958/pixlr-image-generator-544836f4-010f-4f4a-beb3-4bb8c82bb302_zewcoo.webp",
+    "image": "https://res.cloudinary.com/dtgczxb3p/image/upload/v1737546278/pexels-angela-khebou-259135285-15455285_1_pjovyu_c_pad_b_gen_fill_w_600_h_400_q1phod.jpg",
     "details": "Mocha is a chocolate-flavored coffee drink made with espresso, steamed milk, and chocolate syrup or powder. It’s a delightful blend of coffee and dessert.",
+    "quantity": 1
+  },
+  {
+    "id": 7,
+    "name": "Brewed Coffee",
+    "description": "Regular brewed coffee with a rich, robust flavor.",
+    "price": 15,
+    "image": "https://res.cloudinary.com/dtgczxb3p/image/upload/v1737546407/pexels-karolina-grabowska-4210881_yncdli_c_pad_b_gen_fill_w_600_h_400_u8avrr.jpg",
+    "quantity": 1
+  },
+  {
+    "id": 8,
+    "name": "Cheesecake",
+    "description": "A smooth and creamy dessert with a buttery crust.",
+    "price": 45,
+    "image": "https://res.cloudinary.com/dtgczxb3p/image/upload/v1737546210/pexels-olenkabohovyk-3323686_tpnozi_c_pad_b_gen_fill_w_600_h_400_mv6a53.jpg",
+    "quantity": 1
+  },
+  {
+    "id": 9,
+    "name": "Chocolate Cake",
+    "description": "Decadent chocolate cake with fresh berries on the side.",
+    "price": 40,
+    "image": "https://res.cloudinary.com/dtgczxb3p/image/upload/v1737546246/pexels-karolina-grabowska-5386666_wwkocl_c_pad_b_gen_fill_w_600_h_400_xzuuqa.jpg",
     "quantity": 1
   }
 ]
