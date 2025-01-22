@@ -1,6 +1,7 @@
 import React from 'react';
 import Footer from '../components/Footer';
 import Review from '../components/Review';
+import ReviewCard from '../components/ReviewCard';
 
 export default function Contact() {
   return (
@@ -34,9 +35,6 @@ export default function Contact() {
       <p className='text-base border border-gray-300 p-2 rounded-md hover:bg-gray-100 cursor-pointer'>
       Phone: <a href="tel:link-phonenumber" className='text-blue-500 underline'>link-phonenumber</a>
       </p>
-      <button className='mt-4 px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600'>
-        Book a Table
-      </button>
       </div>
 
       <div className='flex flex-col space-y-4 p-4'>
@@ -45,7 +43,7 @@ export default function Contact() {
       </div>
       </div>
 
-      <Review />
+      <ReviewCard />
       <Footer />
     </div>
     
