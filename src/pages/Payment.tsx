@@ -1,12 +1,16 @@
 import React, { useEffect, useState } from "react";
 import Nav from "../components/Nav";
 import { useCart } from "../components/CartContext";
+import PopupWindow from "../components/PopupWindow";
 
 type Props = {};
 
 export default function Payment({}: Props) {
   const { totalPrice, totalQuantity, cartItems, setCartItems } = useCart();
   const [payment, setPayment] = useState<"swish" | "card">("swish");
+  const [isPopup, setIsPopup] = useState(false);
+  const [orderNumber, setOrderNumber] = useState("");
+
   const handleRemoveItem = (id: number) => {
     setCartItems((prevCart) => prevCart.filter((item) => item.id !== id));
   };
@@ -17,8 +21,10 @@ export default function Payment({}: Props) {
       )
     );
   };
-  const handlePaymentMethod = (method: "swish" | "card") => {
-    setPayment(method);
+  const handleConfirmPayment = () => {
+    const randomOrder = Math.floor(100000 + Math.random() * 900000).toString();
+    setOrderNumber(randomOrder);
+    setIsPopup(true);
   };
 
   return (
@@ -108,11 +114,11 @@ export default function Payment({}: Props) {
                 />
               </div>
               <div className="flex flex-col">
-                <label htmlFor="email" className="w-full">
-                  Enter your email address to receive order status
+                <label htmlFor="name" className="w-full">
+                  Enter your name for the pickup!
                 </label>
                 <input
-                  type="email"
+                  type="text"
                   className="border border-l-slate-400 rounded-md py-1 px-2 w-full sm:w-2/3 "
                 />
               </div>
@@ -124,6 +130,14 @@ export default function Payment({}: Props) {
           ) : (
             <div className="px-10">
               <div className="flex flex-col pb-5 gap-1">
+                <label htmlFor="name">Card holder name</label>
+                <input
+                  type="text"
+                  placeholder="John Doe"
+                  className="border-slate-200 border px-3 py-1 rounded-md"
+                />
+              </div>
+              <div className="flex flex-col pb-5 gap-1">
                 <label>Card number</label>
                 <input
                   type="text"
@@ -131,7 +145,7 @@ export default function Payment({}: Props) {
                   className="border-slate-200 border px-3 py-1 rounded-md"
                 />
               </div>
-              <div className="flex flex-wrap gap-5">
+              <div className="flex flex-wrap gap-5 mb-3">
                 <div className="flex flex-col gap-1">
                   <label>Expiry</label>
                   <input
@@ -153,10 +167,20 @@ export default function Payment({}: Props) {
           )}
 
           <div className="px-10">
-            <button className="bg-slate-200 rounded-lg px-10 py-3 hover:bg-slate-300">
+            <button
+              className="bg-slate-200 rounded-lg px-10 py-3 hover:bg-slate-300"
+              onClick={handleConfirmPayment}
+            >
               Confirm the payment
             </button>
           </div>
+          {isPopup && (
+            <PopupWindow
+              isPopup={isPopup}
+              setIsPopup={setIsPopup}
+              orderNumber={orderNumber}
+            />
+          )}
         </div>
       </div>
     </div>
