@@ -12,18 +12,15 @@ export default function RollingImages() {
           width: `${images.length * 10}rem`, // Dynamically calculate width for images + gap
         }}
       >
-        {productData.map((coffee, i) => (
-          <Link
-            to={`/product/${coffee.id}`}
-            className="flex-shrink-0 w-48 h-48  rounded-lg overflow-hidden mr-5 transform transition-transform hover:scale-110"
-          >
+        {images.concat(images).map((image, i) => (
+          <button className="flex-shrink-0 w-48 h-48  rounded-lg overflow-hidden mr-5 transform transition-transform hover:scale-110">
             <img
               key={i}
-              src={coffee.image}
+              src={image}
               alt="Rolling image"
               className="h-full w-full object-cover"
             />
-          </Link>
+          </button>
         ))}
       </div>
     </div>

@@ -14,11 +14,21 @@ module.exports = {
       },
       animation: {
         "infinite-scroll": "scroll 40s linear infinite",
+        "fade-in": "fadeIn 2s ease-in-out",
+        "slide-in": "slideIn 1.5s ease-out",
       },
       keyframes: {
         scroll: {
           "0%": { transform: "translateX(0)" },
           "100%": { transform: "translateX(-50%)" },
+        },
+        fadeIn: {
+          "0%": { opacity: "0" },
+          "100%": { opacity: "1" },
+        },
+        slideIn: {
+          "0%": { opacity: "0", transform: "translateY(50px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
         },
       },
     },

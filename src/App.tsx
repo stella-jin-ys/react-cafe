@@ -9,7 +9,7 @@ import Contact from "./pages/Contact";
 function App() {
   return (
     <CartProvider>
-      <Router>
+      <Router basename="/react-cafe">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/menu" element={<Menu />} />
