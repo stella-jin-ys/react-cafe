@@ -12,7 +12,7 @@ export default function Nav() {
       <Link to="/">
         <div className="flex gap-1 font-bol">
           <img
-            src="./assets/logo.png"
+            src={`${process.env.PUBLIC_URL}/assets/logo.png`}
             alt="logo"
             className="w-6 h-6 object-cover"
           />
