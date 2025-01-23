@@ -28,7 +28,7 @@ export default function Contact() {
             <p className="text-base">Open Hours:</p>
             <p className="text-sm">Mo-Sun 9 AM - 5PM</p>
             <p className="text-base border border-gray-300 p-2 rounded-md hover:bg-gray-100 cursor-pointer">
-              Email:{" "}
+              Email:
               <a
                 href="mailto:link@reactcafe.com"
                 className="text-blue-500 underline"
@@ -37,7 +37,7 @@ export default function Contact() {
               </a>
             </p>
             <p className="text-base border border-gray-300 p-2 rounded-md hover:bg-gray-100 cursor-pointer">
-              Phone:{" "}
+              Phone:
               <a
                 href="tel:link-phonenumber"
                 className="text-blue-500 underline"
@@ -50,12 +50,12 @@ export default function Contact() {
           <div className="flex flex-col space-y-4 p-4">
             <img
               className="h-48 w-48 md:h-100 md:w-96 object-cover"
-              src="/assets/coffeshop.png"
+              src={`${process.env.PUBLIC_URL}/assets/coffeeshop.png`}
               alt="coffeshop1"
             />
             <img
               className="h-48 w-48 md:h-100 md:w-96 object-cover"
-              src="/assets/coffeshops.png"
+              src={`${process.env.PUBLIC_URL}/assets/coffeeshops.png`}
               alt="coffeshop2"
             />
           </div>

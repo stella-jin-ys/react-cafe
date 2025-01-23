@@ -55,7 +55,7 @@ export default function Payment({}: Props) {
                     onClick={() => handleRemoveItem(item.id)}
                   >
                     <img
-                      src="/assets/close.png"
+                      src={`${process.env.PUBLIC_URL}/assets/close.png`}
                       alt="delete item"
                       className="w-6 h-6 object-cover"
                     />
@@ -74,7 +74,7 @@ export default function Payment({}: Props) {
                       }
                     />
                   </div>
-                  <div className="">
+                  <div>
                     <p className="text-nowrap">
                       {item.price * item.quantity} SEK
                     </p>
@@ -119,7 +119,7 @@ export default function Payment({}: Props) {
 
               <div>
                 <img
-                  src="/assets/scan.png"
+                  src={`${process.env.PUBLIC_URL}/assets/scan.png`}
                   alt="payment code"
                   className="h-20 w-20 object-cover"
                 />
