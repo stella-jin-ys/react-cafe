@@ -9,7 +9,12 @@ export default function Payment({}: Props) {
   const { totalPrice, totalQuantity, cartItems, setCartItems } = useCart();
   const [payment, setPayment] = useState<"swish" | "card">("swish");
   const [isPopup, setIsPopup] = useState(false);
+  const [isError, setIsError] = useState(false);
   const [orderNumber, setOrderNumber] = useState("");
+  const [cardName, setCardName] = useState("");
+  const [cardNumber, setCardNumber] = useState("");
+  const [expiry, setExpiry] = useState("");
+  const [cvc, setCvc] = useState("");
 
   const handleRemoveItem = (id: number) => {
     setCartItems((prevCart) => prevCart.filter((item) => item.id !== id));
@@ -22,8 +27,17 @@ export default function Payment({}: Props) {
     );
   };
   const handleConfirmPayment = () => {
-    const randomOrder = `Order-${Math.floor(100000 + Math.random() * 900000)}`;
-    setOrderNumber(randomOrder);
+    if (payment === "card") {
+      if (cardName || cardNumber || expiry || cvc === "") {
+        setIsError(true);
+      } else {
+        setIsError(false);
+      }
+    } else {
+      const randomOrder = `${Math.floor(100000 + Math.random() * 900000)}`;
+      setOrderNumber(randomOrder);
+      setIsError(false);
+    }
     setIsPopup(true);
   };
 
@@ -140,21 +154,35 @@ export default function Payment({}: Props) {
             </div>
           ) : (
             <div className="px-10">
-              <div className="flex flex-col pb-5 gap-1">
+              <div className="flex flex-col pb-5 gap-1 sm:w-1/2">
+                <label>Card holder name</label>
+                <input
+                  type="text"
+                  placeholder="John Doe"
+                  className="border-slate-200 border px-3 py-1 rounded-md"
+                  value={cardName}
+                  onChange={(e) => setCardName(e.target.value)}
+                />
+              </div>
+              <div className="flex flex-col pb-5 gap-1 sm:w-1/2">
                 <label>Card number</label>
                 <input
                   type="text"
                   placeholder="xxxx xxxx xxxx xxxx"
                   className="border-slate-200 border px-3 py-1 rounded-md"
+                  value={cardNumber}
+                  onChange={(e) => setCardNumber(e.target.value)}
                 />
               </div>
-              <div className="flex flex-wrap gap-5">
+              <div className="flex flex-wrap gap-5 pb-5">
                 <div className="flex flex-col gap-1">
                   <label>Expiry</label>
                   <input
                     type="text"
                     placeholder="xx / xx"
                     className="border-slate-200 border px-3 py-1 rounded-md"
+                    value={expiry}
+                    onChange={(e) => setExpiry(e.target.value)}
                   />
                 </div>
                 <div className=" flex flex-col gap-1">
@@ -163,6 +191,8 @@ export default function Payment({}: Props) {
                     type="text"
                     placeholder="xxx"
                     className="border-slate-200 border px-3 py-1 rounded-md"
+                    value={cvc}
+                    onChange={(e) => setCvc(e.target.value)}
                   />
                 </div>
               </div>
@@ -174,7 +204,7 @@ export default function Payment({}: Props) {
               className="bg-slate-200 rounded-lg px-10 py-3 hover:bg-slate-300"
               onClick={handleConfirmPayment}
             >
-              Confirm the payment
+              Confirm
             </button>
           </div>
           {isPopup && (
@@ -182,6 +212,7 @@ export default function Payment({}: Props) {
               isPopup={isPopup}
               setIsPopup={setIsPopup}
               orderNumber={orderNumber}
+              isError={isError}
             />
           )}
         </div>
