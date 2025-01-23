@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/react-cafe/static/css/main.4733e288.css",
-    "main.js": "/react-cafe/static/js/main.54011fa1.js",
+    "main.js": "/react-cafe/static/js/main.9e6c06d4.js",
     "index.html": "/react-cafe/index.html",
     "main.4733e288.css.map": "/react-cafe/static/css/main.4733e288.css.map",
-    "main.54011fa1.js.map": "/react-cafe/static/js/main.54011fa1.js.map"
+    "main.9e6c06d4.js.map": "/react-cafe/static/js/main.9e6c06d4.js.map"
   },
   "entrypoints": [
     "static/css/main.4733e288.css",
-    "static/js/main.54011fa1.js"
+    "static/js/main.9e6c06d4.js"
   ]
 }
