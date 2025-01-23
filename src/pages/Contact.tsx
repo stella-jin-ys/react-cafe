@@ -50,12 +50,12 @@ export default function Contact() {
           <div className="flex flex-col space-y-4 p-4">
             <img
               className="h-48 w-48 md:h-100 md:w-96 object-cover"
-              src={`${process.env.PUBLIC_URL}/assets/coffeeshop.png`}
+              src="https://images.unsplash.com/photo-1453614512568-c4024d13c247?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGNhZmV8ZW58MHx8MHx8fDA%3D"
               alt="coffeshop1"
             />
             <img
               className="h-48 w-48 md:h-100 md:w-96 object-cover"
-              src={`${process.env.PUBLIC_URL}/assets/coffeeshops.png`}
+              src="https://images.unsplash.com/photo-1463797221720-6b07e6426c24?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTV8fGNhZmV8ZW58MHx8MHx8fDA%3D"
               alt="coffeshop2"
             />
           </div>
